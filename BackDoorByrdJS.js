@@ -1,3 +1,5 @@
+import React from 'react';
+import ReactDOM from 'react';
 const { useState } = React;
 const contentHeader = {
   about: 
