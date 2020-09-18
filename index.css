@@ -19,7 +19,7 @@ body {
   height: 98vh;
   margin-top: 11vh;
   margin-left: 12.5vw;
-  background-color: rgb(42, 42, 51, 0.6);
+  background-color: rgb(42, 42, 51, 0.8);
 }
 h1 {
   margin: 0;
@@ -60,10 +60,11 @@ a {
   margin-left: 2.5vw;
   margin-top: 5vh;
   padding-top: 2vh;
+  outline: 2px solid white;
   overflow: auto;
 }
 .projectsFlexItem {
-  height: 50vh;
+  height: auto;
   width: 40vw;
   margin-bottom: 2vh;
   background-color: rgba(32, 34, 33, 0.85);
@@ -71,7 +72,7 @@ a {
 }
 .imageWrapper {
   width: 96%;
-  height: 90%;
+  height: auto;
   margin: auto;
   margin-top: 2%;
   outline: 1px solid white;
