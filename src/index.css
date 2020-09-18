@@ -66,6 +66,8 @@ a {
   height: 50vh;
   width: 40vw;
   margin-bottom: 2vh;
+  background-color: rgba(32, 34, 33, 0.85);
+  text-align: center;
 }
 .imageWrapper {
   width: 96%;
@@ -78,15 +80,7 @@ a {
 .projectScreenShot {
   width: 100%;
 }
-#dndAppFlexItem {
-  background-color: blue;
-}
-#calculatorFlexItem {
-  background-color: white;
-}
-#diceRollerFlexItem {
-  background-color: green;
-}
-#quoteGeneratorFlexItem {
-  background-color: red;
+.projectLink {
+  display: inline-block;
+  margin-top: 10px;
 }
