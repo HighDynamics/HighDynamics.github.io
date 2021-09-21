@@ -1,87 +1,104 @@
 <!DOCTYPE html>
-<head>
-  <link rel="stylesheet" href="normalize.css" />
-  <link rel="stylesheet" href="index.css" />
-</head>
-<body>
-  <div class="background">
-    <div class="layer">
-      <div id="welcome">
-        <h1>
-          Hello, and welcome.
-        </h1>
-        <p>
-          I'm a beginning, self-taught, front-end developer who enjoys putting
-          things togther and see them work.
-        </p>
-        <p>
-          Here, you will find links to projects started and maintained by me.
-        </p>
-      </div>
-      <div id="email">
-        <p style="font-size: 1.2rem;">
-          Comments, suggestions, and praise are all welcome commodities.
-        </p>
-        <p>-Daniel</p>
-        <a href="mailto: HighDynamics@gmail.com">HighDynamics@gmail.com</a>
-      </div>
-      <div id="projectsFlexContainer">
-        <div id="dndAppFlexItem" class="projectsFlexItem">
-          <div class="imageWrapper">
-            <img class="projectScreenShot" src="./images/dndSS.png" />
-          </div>
-          <a
-            class="projectLink"
-            href="http://HighDynamics.github.io/dnd-app"
-            target="_blank"
-            >Dungeons & Dragons WebApp</a
-          >
-        </div>
-        <div id="calculatorFlexItem" class="projectsFlexItem">
-          <div class="imageWrapper">
-            <img class="projectScreenShot" src="./images/calculatorSS.png" />
-          </div>
-          <a
-            class="projectLink"
-            href="https://highdynamics.github.io/calculator/"
-            target="_blank"
-            >Calculator</a
-          >
-        </div>
-        <div id="diceRollerFlexItem" class="projectsFlexItem">
-          <div class="imageWrapper">
-            <img class="projectScreenShot" src="./images/dice-rollerSS.png" />
-          </div>
-          <a
-            class="projectLink"
-            href="https://highdynamics.github.io/dice_roller"
-            target="_blank"
-            >Dice Roller</a
-          >
-        </div>
-        <div id="quoteGeneratorFlexItem" class="projectsFlexItem">
-          <div class="imageWrapper">
-            <img class="projectScreenShot" src="./images/quoteSS.png" />
-          </div>
-          <a
-            class="projectLink"
-            href="https://codepen.io/highdynamics/full/PowrXqX"
-            target="_blank"
-            >Quote Generator</a
-          >
-        </div>
-        <div id="markdownPreviewerFlexItem" class="projectsFlexItem">
-          <div class="imageWrapper">
-            <img class="projectScreenShot" src="./images/markdownSS.png" />
-          </div>
-          <a
-            class="projectLink"
-            href="https://codepen.io/highdynamics/full/QWbbmjj"
-            target="_blank"
-            >Markdown Previewer</a
-          >
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Daniel's Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <h1>Daniel Denton</h1>
+      <nav>
+        <ul>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#deployed">Deployed Projects</a></li>
+          <li><a href="#playground">Playground</a></li>
+          <li><a href="#under-development">Developing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+      <img src="images/dark-vector.png" alt=""/>
+      <h2>Hello, and welcome</h2>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora
+        inventore nam cum nemo, exercitationem porro autem maxime ab deserunt
+        quidem suscipit dicta quo ullam maiores dignissimos quia laborum
+        repellendus? Culpa!
+      </p>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio modi
+        beatae, consequatur nesciunt voluptates veniam doloribus consequuntur
+        rem illo quia pariatur, dolorem veritatis accusamus quod labore maiores!
+        Quo, impedit. Magni!
+      </p>
+    </section>
+
+    <!-- DEPLOYED PROJECTS -->
+    <section id="deployed">
+      <h2>Deployed</h2>
+      <p>Projects with a full git history</p>
+      <article>
+        <h3>Run Buddy</h3>
+        <img src="./images/run-buddy.png" alt="Run Buddy Webiste"/>
+      </article>
+      
+      <article>
+        <h3>Effect Tracker</h3>
+        <img src="./images/effect-tracker.png" alt="Effect Tracker App" />
+      </article>
+
+      <article>
+        <h3>Calculator</h3>
+        <img src="./images/calculator.png" alt="Calculator App" />
+      </article>
+    </section>
+
+    <!-- PLAYGROUND PROJECTS -->
+    <section id="playground">
+      <h2>Playground Projects</h2>
+      <p>Projects without a git history. These were created either for fun, or for learning purposes.</p>
+      <article>
+        <h3>Quote Generator</h3>
+        <img src="./images/quote.png" alt="Quote Generator App"/>
+      </article>
+
+      <article>
+        <h3>Markdown Previewer</h3>
+        <img src="./images/markdown.png" alt="Markdown Preview App" />
+      </article>
+
+      <article>
+        <h3>'Technical' Document</h3>
+        <img src="./images/technical-doc.png" alt="Technical Document App" />
+      </article>
+    </section>
+
+    <!-- PROJECTS UNDER DEVELOPMENT -->
+    <section id="under-development">
+      <h2>Under Development</h2>
+      <p>Projects that aren't quite finished</p>
+      <article>
+        <h3>DnD App</h3>
+        <img src="./images/dnd-app.png" alt="Dungeons and Dragons App" />
+      </article>
+
+      <article>
+        <h3>Dice Roller</h3>
+        <img src="./images/dice-roller.png" alt="Dice Roller App" />
+      </article>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+    </section>
+  </body>
+</html>
