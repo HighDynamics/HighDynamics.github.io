@@ -99,3 +99,83 @@ header nav ul li a {
   font-size: 20px;
 }
 /* HERO STYLES END */
+
+/* ABOUT ME STYLES START */
+#about-me {
+  margin: 15px auto;
+}
+
+#about-me h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+#about-me p {
+  text-align: center;
+  font-size: 20px;
+}
+/* ABOUT ME STYLES END */
+
+/* PROJECTS SECTION START */
+#deployed {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+#playground {
+  background-color: var(--quaternary-color);
+}
+
+#developing {
+  background-color: var(--tertiary-color);
+  color: white;
+}
+
+.projects h2 {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 40px;
+  font-size: 60px;
+  width: 70%;
+}
+
+.projects > p {
+  text-align: center;
+  width: 70%;
+  font-size: 30px;
+  border-bottom: 4px solid;
+  margin: 0 auto 40px auto;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-container article:first-child {
+  height: 400px;
+}
+
+.projects-container article:first-child div {
+  width: 30%;
+}
+.projects-container article:first-child img{
+  width:70%;
+}
+
+.projects-container article {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 200px;
+}
+
+.projects-container article div {
+  width: 70%;
+}
+
+.projects-container article img {
+  width: 30%;
+}
+/* PROJECTS SECTION END */
