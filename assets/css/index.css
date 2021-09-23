@@ -211,6 +211,11 @@ header nav ul li a {
   margin-bottom: 20px;
 }
 
+.projects-container article h3 {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
 .projects-container article div {
   width: 60%;
 }
@@ -227,7 +232,7 @@ header nav ul li a {
 }
 
 .projects-container article:first-child div {
-  width: 20%;
+  width: 30%;
 }
 .projects-container article:first-child img {
   width: auto;
