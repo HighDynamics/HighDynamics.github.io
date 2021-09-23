@@ -2,6 +2,7 @@
   --primary-color: rgb(13, 95, 138);
   --secondary-color: rgb(110, 195, 193);
   --tertiary-color: rgb(29, 18, 92);
+  --quaternary-color: rgb(222, 220, 228);
 }
 
 /* UTILITY SYTLES START */
@@ -96,7 +97,7 @@ header nav ul li a {
 }
 
 .hero p {
-  color: white;
+  color: var(--quaternary-color);
   text-align: center;
   width: 80%;
   font-size: 20px;
@@ -105,7 +106,9 @@ header nav ul li a {
 
 /* ABOUT ME STYLES START */
 #about-me {
-  margin: 15px auto;
+  padding: 15px auto;
+  background-color: var(--quaternary-color);
+  color: var(--primary-color)
 }
 
 #about-me div {
@@ -117,6 +120,7 @@ header nav ul li a {
 #about-me div img {
   width: 25%;
   border-radius: 50%;
+  margin: 5px;
 }
 
 #about-me div div {
@@ -137,7 +141,7 @@ header nav ul li a {
 /* PROJECTS SECTION START */
 .projects {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--quaternary-color);
 }
 
 .projects h2 {
@@ -170,7 +174,7 @@ header nav ul li a {
   width: 80%;
   height: 200px;
   margin-bottom: 20px;
-  border: 2px solid white;
+  border: 2px solid var(--quaternary-color);
   border-radius: 15px;
   background-color: var(--secondary-color);
 
@@ -202,6 +206,7 @@ header nav ul li a {
   margin-right: 10px;
 }
 
+/* first project in each section should be larger */
 .projects-container article:first-child {
   height: 400px;
 }
@@ -213,14 +218,14 @@ header nav ul li a {
   width: 55%;
 }
 
-/* DIFFERENT COLOR PROFILE FOR PLAYGROUND */
+/* alternate color profile in playground */
 #playground {
   background-color: rgb(222, 220, 228);
   color: var(--primary-color);
 }
 
 #playground .projects-container article {
-  border-color: black;
+  border-color: var(--primary-color);
 }
 
 /* PROJECTS SECTION END */
