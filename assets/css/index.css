@@ -30,7 +30,7 @@ header {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--tertiary-color);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -63,11 +63,16 @@ header nav ul li a {
   font-size: 30px;
   color: var(--secondary-color);
 }
+
+header nav ul li a:hover {
+  color: var(--quaternary-color);
+  border-bottom: 2px solid var(--quaternary-color);
+}
 /* HEADER STYLES END */
 
 /* HERO STYLES START */
 .hero {
-  background-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
   position: relative;
   height: 400px;
   display: flex;
@@ -91,13 +96,15 @@ header nav ul li a {
 .hero h2 {
   width: 100%;
   text-align: center;
-  color: var(--secondary-color);
+  color: var(--tertiary-color);
   font-size: 80px;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 5px var(--quaternary-color);
+  z-index: 1;
 }
 
 .hero p {
-  color: var(--quaternary-color);
+  color: var(--tertiary-color);
   text-align: center;
   width: 80%;
   font-size: 20px;
@@ -177,6 +184,7 @@ header nav ul li a {
   border: 2px solid var(--quaternary-color);
   border-radius: 15px;
   background-color: var(--secondary-color);
+  box-shadow: 5px 5px 10px var(--tertiary-color);
 
 }
 
@@ -215,7 +223,7 @@ header nav ul li a {
   width: 40%;
 }
 .projects-container article:first-child img {
-  width: 55%;
+  max-width: 55%;
 }
 
 /* alternate color profile in playground */
@@ -226,6 +234,7 @@ header nav ul li a {
 
 #playground .projects-container article {
   border-color: var(--primary-color);
+  box-shadow: 5px 5px 10px black;
 }
 
 /* PROJECTS SECTION END */
