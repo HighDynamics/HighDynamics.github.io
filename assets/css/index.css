@@ -17,6 +17,19 @@ h1, h2 {
   text-shadow: 2px 2px 5px black;
 }
 
+h2 {
+  font-size: 65px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  color: var(--tertiary-color);
+  font-size: 20px;
+}
+
 img {
   width: 100%;
 }
@@ -107,7 +120,6 @@ header nav ul li a:hover {
   color: var(--tertiary-color);
   text-align: center;
   width: 80%;
-  font-size: 20px;
 }
 /* HERO STYLES END */
 
@@ -141,12 +153,11 @@ header nav ul li a:hover {
 
 #about-me h2 {
   text-align: center;
-  font-size: 60px;
   width: 100%;
 }
 /* ABOUT ME STYLES END */
 
-/* PROJECTS SECTION START */
+/* PROJECTS STYLES START */
 .projects {
   background-color: var(--primary-color);
   color: var(--quaternary-color);
@@ -156,14 +167,12 @@ header nav ul li a:hover {
   text-align: center;
   margin: 0 auto;
   padding-top: 40px;
-  font-size: 60px;
   width: 100%;
 }
 
 .projects > p {
   text-align: center;
   width: 70%;
-  font-size: 30px;
   border-bottom: 4px solid;
   margin: 0 auto 40px auto;
 }
@@ -206,10 +215,6 @@ header nav ul li a:hover {
   margin: 10px auto;
 }
 
-.projects-container a {
-  color: var(--tertiary-color);
-}
-
 .projects-container img {
   width: auto;
   max-height: 90%;
@@ -240,5 +245,22 @@ header nav ul li a:hover {
   border-color: var(--primary-color);
   box-shadow: 5px 5px 10px black;
 }
+/* PROJECTS STYLES END */
 
-/* PROJECTS SECTION END */
+/* CONTACT STYLES START */
+#contact {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--quaternary-color);
+}
+
+#contact h2 {
+  width: 45%;
+}
+
+#contact div {
+  width: 45%;
+}
+/* CONTACT STYLES END */
