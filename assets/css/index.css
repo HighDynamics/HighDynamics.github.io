@@ -13,7 +13,8 @@
   font-family: "Montserrat", sans-serif;
 }
 
-h1, h2 {
+h1,
+h2 {
   text-shadow: 2px 2px 5px black;
 }
 
@@ -127,7 +128,7 @@ header nav ul li a:hover {
 #about-me {
   padding: 15px auto;
   background-color: var(--quaternary-color);
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
 #about-me div {
@@ -195,7 +196,6 @@ header nav ul li a:hover {
   border-radius: 15px;
   background-color: var(--secondary-color);
   box-shadow: 5px 5px 10px var(--tertiary-color);
-
 }
 
 .projects-container h3 {
@@ -264,3 +264,25 @@ header nav ul li a:hover {
   width: 45%;
 }
 /* CONTACT STYLES END */
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 1024px) {
+  header {
+    flex-wrap: nowrap;
+  }
+  header h1 {
+    width: 30%;
+    font-size: 40px;
+    border: none;
+    margin: 0;
+  }
+
+  header nav {
+    width: 60%;
+    margin: 0;
+  }
+
+  header nav ul li a {
+    font-size: 20px;
+  }
+}
