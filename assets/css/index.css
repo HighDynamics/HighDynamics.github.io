@@ -162,6 +162,7 @@ header nav ul li a:hover {
 .projects {
   background-color: var(--primary-color);
   color: var(--quaternary-color);
+  padding-bottom: 20px;
 }
 
 .projects h2 {
@@ -179,72 +180,62 @@ header nav ul li a:hover {
 }
 
 .projects-container {
+  margin: 0 auto;
+  width: 90%;
+  height: 27rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-}
-
-.projects-container article {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  height: 200px;
-  margin-bottom: 20px;
   border: 2px solid var(--quaternary-color);
-  border-radius: 15px;
+  border-radius: 5px;
   background-color: var(--secondary-color);
   box-shadow: 5px 5px 10px var(--tertiary-color);
 }
 
-.projects-container article > a {
+/* first project in each section should be larger */
+.projects-container > .project-container {
   width: auto;
-  height: 90%;
-  margin-right: 10px;
+  max-height: 27rem;
+  padding: 1rem;
+}
+
+.projects-container > .project-container a {
+  width: max-content;
+}
+
+.projects-container > .project-container img {
+  max-height: 25rem;
+}
+
+.secondary-projects {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.secondary-projects .project-container{
+  max-width: 50%;
+  padding: 0 .5rem .5rem 0;
+}
+
+.project-container a {
+  display: block;
   background-color: black;
+  background-clip:content-box;
 }
 
-.projects-container h3 {
-  font-size: 26px;
-}
-
-.projects-container div {
-  width: 60%;
-  margin-left: 10px;
-}
-
-.projects-container span {
-  border-top: 2px dashed;
-  border-bottom: 2px dashed;
-  font-style: italic;
-  display: inline-block;
-  margin: 10px auto;
-}
-
-.projects-container img {
-  width: auto;
-  max-height: 100%;
-  max-width: 100%;
+.project-container img {
+  display: block;
   object-fit: contain;
   box-shadow: -2px -2px 6px black;
   opacity: .8;
-  transition: opacity .2s, box-shadow 1s
+  transition: opacity .2s, box-shadow 1s;
 }
 
-.projects-container img:hover {
+.project-container img:hover {
   opacity: 1;
   box-shadow: 0px 0px 15px black;
 }
 
-/* first project in each section should be larger */
-.projects-container article:first-child {
-  height: 400px;
-}
-
-.projects-container article:first-child div {
-  width: 40%;
-}
 
 /* alternate color profile in playground */
 #playground {
@@ -252,8 +243,7 @@ header nav ul li a:hover {
   color: var(--primary-color);
 }
 
-#playground .projects-container article {
-  border-color: var(--primary-color);
+#playground .projects-container {
   box-shadow: 5px 5px 10px black;
 }
 /* PROJECTS STYLES END */
