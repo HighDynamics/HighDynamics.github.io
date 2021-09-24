@@ -198,6 +198,13 @@ header nav ul li a:hover {
   box-shadow: 5px 5px 10px var(--tertiary-color);
 }
 
+.projects-container article > a {
+  width: auto;
+  height: 90%;
+  margin-right: 10px;
+  background-color: black;
+}
+
 .projects-container h3 {
   font-size: 26px;
 }
@@ -217,10 +224,17 @@ header nav ul li a:hover {
 
 .projects-container img {
   width: auto;
-  max-height: 90%;
+  max-height: 100%;
+  max-width: 100%;
   object-fit: contain;
+  box-shadow: -2px -2px 6px black;
+  opacity: .8;
+  transition: opacity .2s, box-shadow 1s
+}
+
+.projects-container img:hover {
+  opacity: 1;
   box-shadow: 0px 0px 15px black;
-  margin-right: 10px;
 }
 
 /* first project in each section should be larger */
@@ -230,9 +244,6 @@ header nav ul li a:hover {
 
 .projects-container article:first-child div {
   width: 40%;
-}
-.projects-container article:first-child img {
-  max-width: 55%;
 }
 
 /* alternate color profile in playground */
