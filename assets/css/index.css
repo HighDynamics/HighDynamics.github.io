@@ -4,6 +4,7 @@
   --tertiary-color: rgb(29, 18, 92);
   --quaternary-color: rgb(222, 220, 228);
   --darker-primary: rgb(8, 67, 99);
+  --darker-secondary:  rgb(78, 138, 137);
   --darker-quaternary: rgb(171, 168, 179);
 }
 
@@ -21,16 +22,16 @@ h2 {
 }
 
 h2 {
-  font-size: 65px;
+  font-size: 2rem;
 }
 
 p {
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 a {
   color: var(--tertiary-color);
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 img {
@@ -54,7 +55,7 @@ header {
 }
 
 header h1 {
-  font-size: 80px;
+  font-size: 3rem;
   color: var(--quaternary-color);
   width: 80%;
   text-align: center;
@@ -72,11 +73,11 @@ header nav ul {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 header nav ul li a {
   text-decoration: none;
-  font-size: 30px;
   color: var(--tertiary-color);
 }
 
@@ -184,8 +185,9 @@ header nav ul li a:hover {
 .projects-container {
   margin: 0 auto;
   width: 90%;
-  height: 27rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   border: 2px solid var(--quaternary-color);
   border-radius: 5px;
   background-color: var(--secondary-color);
@@ -194,36 +196,27 @@ header nav ul li a:hover {
 
 /* first project in each section should be larger */
 .projects-container > .project-container {
-  width: auto;
-  max-height: 27rem;
+  min-width: 60%;
+  max-width: 100%;
   padding: 1rem;
-}
-
-.projects-container > .project-container a {
-  width: max-content;
-}
-
-.projects-container > .project-container img {
-  max-height: 25rem;
 }
 
 .secondary-projects {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
   padding: 1rem;
 }
 
 .secondary-projects .project-container {
-  max-width: 50%;
+  max-width: 30%;
   padding: 0 0.5rem 0.5rem 0;
 }
 
 .project-container a {
-  display: block;
   position: relative;
-  background-color: black;
-  background-clip: content-box;
+  display: block;
+  width: fit-content;
 }
 
 .project-container img {
@@ -231,13 +224,14 @@ header nav ul li a:hover {
   object-fit: contain;
   max-height: 25rem;
   box-shadow: -2px -2px 6px black;
-  opacity: 0.8;
-  transition: opacity 0.2s, box-shadow 1s;
+  background-color: var(--darker-secondary);
+  filter: grayscale(50%);
+  transition: filter 1s, box-shadow 1s;
 }
 
 .project-container img:hover {
-  opacity: 1;
   box-shadow: 0px 0px 15px black;
+  filter: none;
 }
 
 .info-tag-container {
@@ -248,14 +242,14 @@ header nav ul li a:hover {
 }
 .info-tag {
   position: absolute;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem .5rem 0.5rem .5rem;
   background-color: var(--darker-primary);
-  font-size: 1rem;
+  font-size: .75em;
   color: var(--darker-quaternary);
   border: 2px solid var(--darker-quaternary);
   border-left: none;
   box-shadow: -2px 1px 2px black;
-  transition: background-color 0.2s, border .2s;
+  transition: background-color 1s, border 1s, color 1s;
 }
 
 .info-tag::before {
@@ -269,7 +263,7 @@ header nav ul li a:hover {
   border-right: 0.7rem solid transparent;
   border-top: 2rem solid var(--darker-quaternary);
   z-index: -1;
-  transition: border-top 0.2s;
+  transition: border-top 1s, border-left 1s;
 }
 
 .info-tag::after {
@@ -284,7 +278,12 @@ header nav ul li a:hover {
   border-bottom: 2rem solid var(--darker-quaternary);
   box-shadow: -8px 1px 2px black;
   z-index: -2;
-  transition: border-bottom 0.2s;
+  transition: border-bottom 1s, border-left 1s;
+}
+
+/* tag should be larger on first item */
+.projects-container > .project-container .info-tag {
+  font-size: 1rem;
 }
 
 /* tag should change on img:hover as well */
@@ -297,10 +296,12 @@ header nav ul li a:hover {
 
 .project-container img:hover + .info-tag-container > .info-tag:before {
   border-top: 2rem solid var(--quaternary-color);
+  border-left: 2rem solid var(--quaternary-color);
 }
 
 .project-container img:hover + .info-tag-container > .info-tag:after {
   border-bottom: 2rem solid var(--quaternary-color);
+  border-left: 2rem solid var(--quaternary-color);
 }
 
 /* alternate color profile in playground */
@@ -333,6 +334,33 @@ header nav ul li a:hover {
 /* CONTACT STYLES END */
 
 /* MEDIA QUERIES */
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+a {
+  font-size: 1.5rem;
+}
+
+  header nav ul li a {
+    font-size: 1.5rem;
+  }
+  
+  #about-me p{
+    font-size: 1rem;
+  }
+  
+  .info-tag {
+    font-size: .75rem;
+  }
+  
+}
+
 @media only screen and (min-width: 1024px) {
   header {
     flex-wrap: nowrap;
@@ -343,13 +371,33 @@ header nav ul li a:hover {
     border: none;
     margin: 0;
   }
-
+  
   header nav {
     width: 60%;
     margin: 0;
   }
-
+  
   header nav ul li a {
     font-size: 20px;
+  }
+
+  #about-me p {
+    font-size: 1.25rem;
+  }
+
+  .projects-container {
+    height: 27rem;
+    flex-wrap: nowrap;
+  }
+  
+  .projects-container > .project-container {
+    width: 60%;
+  }
+  
+  .secondary-projects {
+    flex-direction: column;
+  }
+  .secondary-projects .project-container {
+    max-width: 50%;
   }
 }
