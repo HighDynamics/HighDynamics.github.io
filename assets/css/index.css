@@ -133,6 +133,7 @@ header nav ul li a:hover {
   padding: 15px auto;
   background-color: var(--quaternary-color);
   color: var(--primary-color);
+  scroll-margin-top: 8rem;
 }
 
 #about-me div {
