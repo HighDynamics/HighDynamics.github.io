@@ -9,15 +9,21 @@ const Nav = ({ navSelection, setNavSelection }) => {
 
   return (
     <header>
+      <span id="header-name">Daniel Denton</span>
       <nav>
         <ul className="nav-list">
           {links.map((link) => (
-            <li className="nav-item" key={link} onClick={handleClick}>
+            <li
+              className={`nav-item ${navSelection === link && 'nav-active'}`}
+              key={link}
+              onClick={handleClick}
+            >
               {link}
             </li>
           ))}
         </ul>
       </nav>
+      <hr />
     </header>
   );
 };
