@@ -83,10 +83,20 @@ const Portfolio = () => {
             />
             <span className="project-name">{project.name}</span>
             <span className="project-stack">{project.stack}</span>
-            <a className="deployed-link" href={project.deployedLink}>
+            <a
+              className="deployed-link"
+              href={project.deployedLink}
+              target="_blank"
+              rel="noreferrer"
+            >
               visit
             </a>
-            <a className="repo-link" href={project.repoLink}>
+            <a
+              className="repo-link"
+              href={project.repoLink}
+              target="_blank"
+              rel="noreferrer"
+            >
               repo
             </a>
             {project.underDevelopment && <span>⚠︎ under development ⚠︎</span>}
@@ -99,7 +109,12 @@ const Portfolio = () => {
         <div className="cli-project-container" key={project.name}>
           <h3>{project.name}</h3>
           <p>{project.stack}</p>
-          <a className="repo-link" href={project.repoLink}>
+          <a
+            className="repo-link"
+            href={project.repoLink}
+            target="_blank"
+            rel="noreferrer"
+          >
             repo
           </a>
         </div>
