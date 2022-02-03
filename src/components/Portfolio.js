@@ -93,7 +93,9 @@ const Portfolio = () => {
                   </div>
                 </div>
                 {project.underDevelopment && (
-                  <span>⚠︎ under development ⚠︎</span>
+                  <span className="under-development">
+                    ⚠︎ under development ⚠︎
+                  </span>
                 )}
                 <div className="project-links">
                   <a

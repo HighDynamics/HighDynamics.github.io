@@ -31,6 +31,10 @@ hr {
   );
 }
 
+.under-development {
+  color: var(--red);
+}
+
 /* NAV */
 #header-name {
   font-size: 3rem;
@@ -182,7 +186,6 @@ p {
 }
 
 .project-details > span {
-  color: var(--red);
   display: block;
   text-align: center;
 }
@@ -212,6 +215,33 @@ p {
 .cli-project-container > hr {
   width: 50%;
   margin: 10px 0;
+}
+
+/* CONTACT */
+#contact-form {
+  margin: 10px 10px;
+}
+
+label {
+  display: block;
+  color: var(--yellow);
+}
+
+input,
+textarea {
+  margin-bottom: 10px;
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
+  border: 1px solid var(--orange);
+}
+
+textarea {
+  width: 80%;
+}
+
+button {
+  background-color: var(--blue);
+  border: none;
 }
 
 /* FOOTER */

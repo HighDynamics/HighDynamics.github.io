@@ -46,9 +46,9 @@ const Contact = () => {
   return (
     <section>
       <h1>Contact me</h1>
-      <span id="under-development">
-        ⚠︎ note: this form is under development - please use contact info in the
-        footer ⚠︎
+      <span className="under-development">
+        ⚠︎ <br /> note: this form is under development - please use the contact
+        options at the bottom of this page <br /> ⚠︎
       </span>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
