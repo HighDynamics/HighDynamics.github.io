@@ -19,7 +19,7 @@ function App() {
         <hr />
         <div id="footer-contact">
           <a href="mailto:highdynamics@gmail.com">
-            <i class="fas fa-envelope"></i>
+            <i className="fas fa-envelope"></i>
           </a>
           <a
             href="https://github.com/highdynamics"
@@ -33,7 +33,7 @@ function App() {
             target="_blank"
             rel="noreferrer"
           >
-            <i class="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin"></i>
           </a>
         </div>
       </footer>

@@ -6,6 +6,7 @@ const resumeLink =
 const Resume = () => {
   return (
     <>
+      <h1>resume</h1>
       <a href={resumeLink} target="_blank" rel="noreferrer">
         download resume
       </a>
