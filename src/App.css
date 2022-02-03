@@ -1,5 +1,4 @@
 :root {
-  box-sizing: content-box;
   --blue: rgb(86, 166, 234);
   --orange: rgb(194, 138, 91);
   --red: rgb(181, 84, 94);
@@ -7,6 +6,10 @@
   --yellow: rgb(228, 191, 123);
   --light-gray: rgb(160, 169, 182);
   --dark-gray: rgb(30, 33, 38);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html,
@@ -114,4 +117,99 @@ hr {
 .text-container > h2,
 p {
   text-align: center;
+}
+
+/* PORTFOLIO */
+.projects-collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-container {
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.project-container > .image-container {
+  position: relative;
+  width: 100%;
+  border: 3px solid var(--orange);
+}
+
+.project-image {
+  width: 100%;
+  display: block;
+  opacity: 0.5;
+}
+
+.project-details {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid var(--orange);
+  background-color: var(--dark-gray);
+}
+
+.project-text {
+  text-align: center;
+}
+
+.project-name {
+  font-size: 2rem;
+}
+
+.project-stack > span::after {
+  content: ' | ';
+}
+
+.project-stack > span:first-child::before {
+  content: '| ';
+}
+
+.project-links {
+  width: 100%;
+  padding: 0 40px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-links > a {
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: var(--blue);
+}
+
+.project-details > span {
+  color: var(--red);
+  display: block;
+  text-align: center;
+}
+
+#portfolio > hr {
+  margin: 10px 0 0 0;
+}
+
+#portfolio > h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.cli-project-container > a {
+  font-size: 1.5rem;
+  text-align: left;
+  margin: 0;
+  text-decoration: none;
+}
+
+.repo-link {
+  color: var(--blue);
+  font-size: 1.5rem;
+}
+
+.cli-project-container > hr {
+  width: 50%;
+  margin: 10px 0;
 }

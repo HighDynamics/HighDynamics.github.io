@@ -15,6 +15,7 @@ function App() {
       {navSelection === 'portfolio' && <Portfolio />}
       {navSelection === 'contact' && <Contact />}
       {navSelection === 'resume' && <Resume />}
+      <hr />
       <footer>CONTACT INFO</footer>
     </>
   );

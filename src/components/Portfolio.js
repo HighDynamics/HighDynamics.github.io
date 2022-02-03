@@ -73,50 +73,72 @@ const Portfolio = () => {
   return (
     <section id="portfolio">
       <h1>portfolio</h1>
-      {deployedProjects.map((project) => (
-        <div className="project-container" key={project.name}>
-          <div className="image-container">
-            <img
-              src={project.image}
-              alt={project.name}
-              className="project-image"
-            />
-            <span className="project-name">{project.name}</span>
-            <span className="project-stack">{project.stack}</span>
-            <a
-              className="deployed-link"
-              href={project.deployedLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              visit
-            </a>
-            <a
-              className="repo-link"
-              href={project.repoLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              repo
-            </a>
-            {project.underDevelopment && <span>⚠︎ under development ⚠︎</span>}
+      <div className="projects-collection">
+        {deployedProjects.map((project) => (
+          <div className="project-container" key={project.name}>
+            <div className="image-container">
+              <img
+                src={project.image}
+                alt={project.name}
+                className="project-image"
+              />
+              <div className="project-details">
+                <div className="project-text">
+                  <span className="project-name">{project.name}</span>
+                  <br />
+                  <div className="project-stack">
+                    {project.stack.map((item) => (
+                      <span key={item}>{item}</span>
+                    ))}
+                  </div>
+                </div>
+                {project.underDevelopment && (
+                  <span>⚠︎ under development ⚠︎</span>
+                )}
+                <div className="project-links">
+                  <a
+                    className="deployed-link"
+                    href={project.deployedLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="fas fa-external-link-alt"></i>
+                  </a>
+                  <a
+                    className="repo-link"
+                    href={project.repoLink}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <i className="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
+      <hr />
       <h2>cli projects</h2>
-      {cliProjects.map((project) => (
+      {cliProjects.map((project, i) => (
         <div className="cli-project-container" key={project.name}>
-          <h3>{project.name}</h3>
-          <p>{project.stack}</p>
           <a
             className="repo-link"
             href={project.repoLink}
             target="_blank"
             rel="noreferrer"
           >
-            repo
+            {project.name}
           </a>
+
+          <div className="project-stack">
+            {project.stack.map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
+
+          {cliProjects.length - 1 === i ? '' : <hr />}
         </div>
       ))}
     </section>
