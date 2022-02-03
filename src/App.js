@@ -15,8 +15,28 @@ function App() {
       {navSelection === 'portfolio' && <Portfolio />}
       {navSelection === 'contact' && <Contact />}
       {navSelection === 'resume' && <Resume />}
-      <hr />
-      <footer>CONTACT INFO</footer>
+      <footer>
+        <hr />
+        <div id="footer-contact">
+          <a href="mailto:highdynamics@gmail.com">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a
+            href="https://github.com/highdynamics"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fab fa-github"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/danielryandenton"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+      </footer>
     </>
   );
 }

@@ -213,3 +213,19 @@ p {
   width: 50%;
   margin: 10px 0;
 }
+
+/* FOOTER */
+footer {
+  margin-top: 20px;
+}
+
+#footer-contact {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20%;
+}
+
+#footer-contact > a {
+  color: var(--blue);
+  font-size: 2rem;
+}
