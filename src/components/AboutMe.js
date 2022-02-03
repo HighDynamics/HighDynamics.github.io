@@ -7,9 +7,14 @@ const AboutMe = () => {
         <h1>hello, and welcome</h1>
         <p>thanks for stopping by</p>
       </section>
-      <section>
+      <hr />
+      <section id="bio">
         <div className="image-container">
-          <img src={require('../assets/images/headshot.jpeg')} alt="headshot" />
+          <img
+            id="headshot"
+            src={require('../assets/images/headshot.jpeg')}
+            alt="headshot"
+          />
         </div>
         <div className="text-container">
           <h2>about me</h2>
