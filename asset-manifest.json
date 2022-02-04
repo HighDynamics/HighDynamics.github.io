@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.13f634eb.css",
-    "main.js": "/static/js/main.664ac868.js",
+    "main.css": "/static/css/main.4c425d99.css",
+    "main.js": "/static/js/main.c7b126a5.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/dnd-app.png": "/static/media/dnd-app.b85dba5d14c90ab3c160.png",
     "static/media/effect-tracker.png": "/static/media/effect-tracker.2cc618f0387de016f499.png",
@@ -14,12 +14,12 @@
     "static/media/resume-pg2.png": "/static/media/resume-pg2.fbb155437becf3763c82.png",
     "static/media/resume-pg1.png": "/static/media/resume-pg1.bbe15037c61f7a59f53a.png",
     "index.html": "/index.html",
-    "main.13f634eb.css.map": "/static/css/main.13f634eb.css.map",
-    "main.664ac868.js.map": "/static/js/main.664ac868.js.map",
+    "main.4c425d99.css.map": "/static/css/main.4c425d99.css.map",
+    "main.c7b126a5.js.map": "/static/js/main.c7b126a5.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13f634eb.css",
-    "static/js/main.664ac868.js"
+    "static/css/main.4c425d99.css",
+    "static/js/main.c7b126a5.js"
   ]
 }
