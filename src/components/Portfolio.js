@@ -1,4 +1,6 @@
 import React from 'react';
+import Project from './Project';
+import CliProject from './CliProject';
 
 const Portfolio = () => {
   const deployedProjects = [
@@ -75,73 +77,29 @@ const Portfolio = () => {
       <h1>portfolio</h1>
       <div className="projects-collection">
         {deployedProjects.map((project) => (
-          <div className="project-container" key={project.name}>
-            <div className="image-container">
-              <img
-                src={project.image}
-                alt={project.name}
-                className="project-image"
-              />
-              <div className="project-details">
-                <div className="project-text">
-                  <span className="project-name">{project.name}</span>
-                  <br />
-                  <div className="project-stack">
-                    {project.stack.map((item) => (
-                      <span key={item}>{item}</span>
-                    ))}
-                  </div>
-                </div>
-                {project.underDevelopment && (
-                  <span className="under-development">
-                    ⚠︎ under development ⚠︎
-                  </span>
-                )}
-                <div className="project-links">
-                  <a
-                    className="deployed-link"
-                    href={project.deployedLink}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fas fa-external-link-alt"></i>
-                  </a>
-                  <a
-                    className="repo-link"
-                    href={project.repoLink}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <i className="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <Project
+            name={project.name}
+            key={project.name}
+            deployedLink={project.deployedLink}
+            repoLink={project.repoLink}
+            image={project.image}
+            stack={project.stack}
+            underDevelopment={project.underDevelopment}
+          />
         ))}
       </div>
 
       <hr />
       <h2>cli projects</h2>
       {cliProjects.map((project, i) => (
-        <div className="cli-project-container" key={project.name}>
-          <a
-            className="repo-link"
-            href={project.repoLink}
-            target="_blank"
-            rel="noreferrer"
-          >
-            {project.name}
-          </a>
-
-          <div className="project-stack">
-            {project.stack.map((item) => (
-              <span key={item}>{item}</span>
-            ))}
-          </div>
-
-          {cliProjects.length - 1 === i ? '' : <hr />}
-        </div>
+        <CliProject
+          name={project.name}
+          key={project.name}
+          repoLink={project.repoLink}
+          stack={project.stack}
+          numOfProjects={cliProjects.length}
+          idx={i}
+        />
       ))}
     </section>
   );
