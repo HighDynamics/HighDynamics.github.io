@@ -258,6 +258,11 @@ p {
 }
 
 /* CONTACT */
+#contact > .under-development {
+  width: 100%;
+  padding: 0 20px;
+}
+
 #contact-form {
   margin: 10px 10px;
 }
@@ -269,7 +274,6 @@ label {
 
 input,
 textarea {
-  margin-bottom: 10px;
   background-color: var(--dark-gray);
   color: var(--light-gray);
   border: 1px solid var(--orange);
@@ -279,11 +283,23 @@ textarea {
   width: 80%;
 }
 
+.validate {
+  display: block;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: var(--red);
+}
+
+.valid {
+  color: var(--green);
+}
+
 button {
   background-color: var(--blue);
   border: none;
   font-size: 16px;
   color: var(--dark-gray);
+  cursor: pointer;
   transition: background-color 0.5s;
 }
 

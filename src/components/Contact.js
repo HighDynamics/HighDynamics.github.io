@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -6,13 +6,21 @@ const Contact = () => {
     email: '',
     message: '',
   });
-  const [errorMessage, setErrorMessage] = useState('');
+  const [error, setError] = useState(true);
 
   const { name, email, message } = formState;
 
   function handleChange(e) {
     setFormState({ ...formState, [e.target.name]: e.target.value });
   }
+
+  useEffect(() => {
+    if (name.length > 0 && validateEmail(email) && message.length > 0) {
+      setError(false);
+    } else {
+      setError(true);
+    }
+  });
 
   function validateEmail(email) {
     const regex =
@@ -21,45 +29,35 @@ const Contact = () => {
     return regex.test(email);
   }
 
-  function handleBlur(e) {
-    if (e.target.name === 'email') {
-      const isValid = validateEmail(e.target.value);
-      if (!isValid) {
-        setErrorMessage('Your email is invalid');
-      } else {
-        setErrorMessage('');
-      }
-    } else {
-      if (!e.target.value.length) {
-        setErrorMessage(`${e.target.name} is required`);
-      } else {
-        setErrorMessage('');
-      }
-    }
-  }
-
   function handleSubmit(e) {
     e.preventDefault();
+
+    if (error) {
+      return;
+    }
+
+    setFormState({ name: '', email: '', message: '' });
+    setError(true);
+
     console.log(formState);
   }
 
   return (
-    <section>
+    <section id="contact">
       <h1>contact</h1>
-      <span className="under-development">
-        ⚠︎ <br /> note: this form is under development - please use the contact
-        options at the bottom of this page <br /> ⚠︎
-      </span>
+      <p className="under-development">
+        ⚠︎ <br />
+        note: this form is under development - please use the contact options at
+        the bottom of this page <br />
+        ⚠︎
+      </p>
       <form id="contact-form" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            name="name"
-            onChange={handleChange}
-            onBlur={handleBlur}
-            defaultValue={name}
-          />
+          <input type="text" name="name" onChange={handleChange} value={name} />
+          <span className={`validate ${name.length > 0 && 'valid'}`}>
+            name is required
+          </span>
         </div>
         <div>
           <label htmlFor="email">Email address:</label>
@@ -67,9 +65,11 @@ const Contact = () => {
             type="email"
             name="email"
             onChange={handleChange}
-            onBlur={handleBlur}
-            defaultValue={email}
+            value={email}
           />
+          <span className={`validate ${validateEmail(email) && 'valid'}`}>
+            email is required
+          </span>
         </div>
         <div>
           <label htmlFor="message">Message:</label>
@@ -77,15 +77,12 @@ const Contact = () => {
             name="message"
             rows="5"
             onChange={handleChange}
-            onBlur={handleBlur}
-            defaultValue={message}
+            value={message}
           />
+          <span className={`validate ${message.length > 0 && 'valid'}`}>
+            message is required
+          </span>
         </div>
-        {errorMessage && (
-          <div>
-            <p className="error-text">{errorMessage}</p>
-          </div>
-        )}
         <button type="submit">Submit</button>
       </form>
     </section>
