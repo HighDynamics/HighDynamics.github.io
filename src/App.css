@@ -19,6 +19,15 @@ body {
   color: var(--light-gray);
 }
 
+main {
+  margin-top: 107px;
+}
+
+section > h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
 hr {
   border: 0;
   height: 1px;
@@ -38,9 +47,25 @@ hr {
 a {
   color: var(--blue);
   text-decoration: none;
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: var(--green);
 }
 
 /* NAV */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--dark-gray);
+  z-index: 1;
+}
+
 #header-name {
   font-size: 3rem;
   display: block;
@@ -48,12 +73,20 @@ a {
   text-align: center;
 }
 
+nav {
+  width: 100%;
+}
+
 .nav-list {
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: space-around;
+}
+
+.nav-item {
   color: var(--blue);
+  transition: color 0.5s;
 }
 
 .nav-item:hover {
@@ -63,6 +96,10 @@ a {
 
 .nav-active {
   color: var(--yellow);
+}
+
+header > hr {
+  width: 100%;
 }
 
 /* ABOUT ME */
@@ -221,6 +258,11 @@ p {
 }
 
 /* CONTACT */
+#contact > .under-development {
+  width: 100%;
+  padding: 0 20px;
+}
+
 #contact-form {
   margin: 10px 10px;
 }
@@ -232,7 +274,6 @@ label {
 
 input,
 textarea {
-  margin-bottom: 10px;
   background-color: var(--dark-gray);
   color: var(--light-gray);
   border: 1px solid var(--orange);
@@ -242,9 +283,28 @@ textarea {
   width: 80%;
 }
 
+.validate {
+  display: block;
+  font-style: italic;
+  margin-bottom: 10px;
+  color: var(--red);
+}
+
+.valid {
+  color: var(--green);
+}
+
 button {
   background-color: var(--blue);
   border: none;
+  font-size: 16px;
+  color: var(--dark-gray);
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+button:hover {
+  background-color: var(--green);
 }
 
 /* RESUME */
@@ -267,4 +327,72 @@ footer {
 
 #footer-contact > a {
   font-size: 2rem;
+}
+
+/* LAPTOP AND LARGER */
+@media only screen and (min-width: 769px) {
+  main {
+    margin-top: 57px;
+  }
+
+  /* NAV */
+  #header-name {
+    display: inline;
+    width: fit-content;
+    margin: 0 0 0 10px;
+  }
+
+  nav {
+    flex-grow: 1;
+    width: auto;
+  }
+
+  /* ABOUTME */
+  #headshot {
+    height: 300px;
+  }
+
+  .text-container > h2 {
+    padding-top: 10%;
+  }
+
+  /* PORTFOLIO */
+  .projects-collection {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0 20px;
+  }
+
+  .project-container {
+    width: 45%;
+    margin-bottom: 30px;
+  }
+
+  .project-container > .image-container {
+    max-height: 320px;
+  }
+
+  .project-image {
+    height: 314px;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+
+  .project-details {
+    opacity: 0;
+    width: 80%;
+    margin-left: 10%;
+    bottom: 25%;
+    border: 1px solid var(--orange);
+    transition: opacity 1s;
+  }
+
+  .image-container:hover > .project-image {
+    opacity: 0.3;
+  }
+
+  .image-container:hover > .project-details {
+    opacity: 1;
+  }
 }
