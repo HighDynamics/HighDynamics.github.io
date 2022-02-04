@@ -11,10 +11,12 @@ function App() {
   return (
     <>
       <Nav navSelection={navSelection} setNavSelection={setNavSelection} />
-      {navSelection === 'about me' && <AboutMe />}
-      {navSelection === 'portfolio' && <Portfolio />}
-      {navSelection === 'contact' && <Contact />}
-      {navSelection === 'resume' && <Resume />}
+      <main>
+        {navSelection === 'about me' && <AboutMe />}
+        {navSelection === 'portfolio' && <Portfolio />}
+        {navSelection === 'contact' && <Contact />}
+        {navSelection === 'resume' && <Resume />}
+      </main>
       <footer>
         <hr />
         <div id="footer-contact">

@@ -5,7 +5,7 @@ const resumeLink =
 
 const Resume = () => {
   return (
-    <>
+    <section id="resume">
       <h1>resume</h1>
       <a href={resumeLink} target="_blank" rel="noreferrer">
         download resume
@@ -22,7 +22,7 @@ const Resume = () => {
           alt="resume page 2"
         />
       </div>
-    </>
+    </section>
   );
 };
 
