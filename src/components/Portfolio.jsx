@@ -1,6 +1,12 @@
 import React from 'react';
 import Project from './Project';
 import CliProject from './CliProject';
+import effectTrackerImage from '../assets/images/effect-tracker.png';
+import techBlogImage from '../assets/images/tech-blog.png';
+import weatherDashboardImage from '../assets/images/weather-dashboard.png';
+import codeQuizImage from '../assets/images/code-quiz.png';
+import dndAppImage from '../assets/images/dnd-app.png';
+import manyDiceImage from '../assets/images/many-dice.png';
 
 const Portfolio = () => {
   const deployedProjects = [
@@ -8,7 +14,7 @@ const Portfolio = () => {
       name: 'effect tracker',
       deployedLink: 'https://highdynamics.github.io/effect-tracker',
       repoLink: 'https://github.com/HighDynamics/effect-tracker',
-      image: require('../assets/images/effect-tracker.png'),
+      image: effectTrackerImage,
       stack: ['React'],
       underDevelopment: false,
     },
@@ -16,7 +22,7 @@ const Portfolio = () => {
       name: 'tech blog',
       deployedLink: 'https://murmuring-badlands-76079.herokuapp.com',
       repoLink: 'https://github.com/HighDynamics/tech-blog',
-      image: require('../assets/images/tech-blog.png'),
+      image: techBlogImage,
       stack: ['MySql', 'Express.js', 'Node.js'],
       underDevelopment: false,
     },
@@ -24,7 +30,7 @@ const Portfolio = () => {
       name: 'weather dashboard',
       deployedLink: 'https://highdynamics.github.io/weather-dashboard/',
       repoLink: 'https://github.com/HighDynamics/weather-dashboard',
-      image: require('../assets/images/weather-dashboard.png'),
+      image: weatherDashboardImage,
       stack: ['HTML', 'CSS', 'JavaScript'],
       underDevelopment: false,
     },
@@ -32,7 +38,7 @@ const Portfolio = () => {
       name: 'code quiz',
       deployedLink: 'https://highdynamics.github.io/code-quiz/',
       repoLink: 'https://github.com/HighDynamics/code-quiz',
-      image: require('../assets/images/code-quiz.png'),
+      image: codeQuizImage,
       stack: ['HTML', 'CSS', 'JavaScript'],
       underDevelopment: false,
     },
@@ -40,7 +46,7 @@ const Portfolio = () => {
       name: 'd&d app',
       deployedLink: 'https://highdynamics.github.io/dnd-app',
       repoLink: 'https://github.com/HighDynamics/dnd-app',
-      image: require('../assets/images/dnd-app.png'),
+      image: dndAppImage,
       stack: ['React'],
       underDevelopment: true,
     },
@@ -48,7 +54,7 @@ const Portfolio = () => {
       name: 'many dice',
       deployedLink: 'https://highdynamics.github.io/many-dice',
       repoLink: 'https://github.com/HighDynamics/many-dice',
-      image: require('../assets/images/many-dice.png'),
+      image: manyDiceImage,
       stack: ['React'],
       underDevelopment: true,
     },
