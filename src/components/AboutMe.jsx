@@ -1,4 +1,5 @@
 import React from 'react';
+import headshot from '../assets/images/headshot.jpeg';
 
 const AboutMe = () => {
   return (
@@ -12,7 +13,7 @@ const AboutMe = () => {
         <div className="image-container">
           <img
             id="headshot"
-            src={require('../assets/images/headshot.jpeg')}
+            src={headshot}
             alt="headshot"
           />
         </div>

@@ -1,4 +1,6 @@
 import React from 'react';
+import resumePage1 from '../assets/images/resume-pg1.png';
+import resumePage2 from '../assets/images/resume-pg2.png';
 
 const resumeLink =
   'https://docs.google.com/document/d/1-TVB-4PuC9y46DB065aTZxZhYFFlNFSZbTxTf6Zz1-Y/export?format=pdf';
@@ -13,12 +15,12 @@ const Resume = () => {
       <div className="resume-container">
         <img
           className="resume"
-          src={require('../assets/images/resume-pg1.png')}
+          src={resumePage1}
           alt="resume page 1"
         />
         <img
           className="resume"
-          src={require('../assets/images/resume-pg2.png')}
+          src={resumePage2}
           alt="resume page 2"
         />
       </div>
